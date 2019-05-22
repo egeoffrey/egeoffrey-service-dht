@@ -1,0 +1,6 @@
+package: myhouse-service-dht
+revision: 1
+version: development
+git: myhouse-project/myhouse-service-dht
+modules:
+  - service/dht
