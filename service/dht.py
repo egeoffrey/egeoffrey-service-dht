@@ -43,7 +43,7 @@ class Dht(Service):
             pin = message.get("pin")
             # select the device
             if type == "dht11": dht_sensor = Adafruit_DHT.DHT11
-            elif type == "dht22": ht_sensor = Adafruit_DHT.DHT22
+            elif type == "dht22": dht_sensor = Adafruit_DHT.DHT22
             else: 
                 self.log_error("invalid type "+type)
                 return

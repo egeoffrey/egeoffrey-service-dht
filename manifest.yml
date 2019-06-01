@@ -1,6 +1,39 @@
 package: myhouse-service-dht
-revision: 1
+revision: 2
 version: development
 git: myhouse-project/myhouse-service-dht
 modules:
   - service/dht
+default_config:
+  - sensors/templates/dht_temperature:
+      disabled: true
+      description: dht
+      format: float_2
+      retain: history
+      calculate: avg_min_max
+      service:
+        configuration:
+          measure: temperature
+          type: dht22
+          pin: 2
+        mode: active
+        name: dht
+        schedule:
+          minutes: 10
+          trigger: interval
+  - sensors/templates/dht_humidity:
+      disabled: true
+      description: dht
+      format: int
+      retain: history
+      calculate: avg_min_max
+      service:
+        configuration:
+          measure: humidity
+          type: dht22
+          pin: 2
+        mode: active
+        name: dht
+        schedule:
+          minutes: 10
+          trigger: interval

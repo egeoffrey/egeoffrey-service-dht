@@ -7,7 +7,7 @@ ARG ARCHITECTURE
 FROM myhouseproject/myhouse-sdk-raspbian:${ARCHITECTURE}-${MYHOUSE_SDK_VERSION}
 
 ### install your module's dependencies
-RUN pip install Adafruit-Python-DHT --install-option="--force-pi"
+RUN pip install Adafruit-Python-DHT --install-option="--force-pi2"
 
 ### copy files into the image
 COPY . $WORKDIR
