@@ -15,9 +15,9 @@
 
 import Adafruit_DHT
 
-from sdk.module.service import Service
+from sdk.python.module.service import Service
 
-import sdk.utils.exceptions as exception
+import sdk.python.utils.exceptions as exception
 
 class Dht(Service):
     # What to do when initializing
