@@ -2,7 +2,7 @@ package: myhouse-service-dht
 revision: 3
 version: development
 github: myhouse-project/myhouse-service-dht
-dockerhub: myhouse-project/myhouse-service-dht
+dockerhub: myhouseproject/myhouse-service-dht
 container_config:
   privileged: true
 description: Retrieve temperature/humidity from a DHT11/DHT22 sensor
