@@ -1,6 +1,11 @@
 package: myhouse-service-dht
 revision: 3
 version: development
-git: myhouse-project/myhouse-service-dht
+github: myhouse-project/myhouse-service-dht
+dockerhub: myhouse-project/myhouse-service-dht
+container_config:
+  privileged: true
+description: Retrieve temperature/humidity from a DHT11/DHT22 sensor
+tags: service dht weather temperature raspberrypi
 modules:
   - service/dht
