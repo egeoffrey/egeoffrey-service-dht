@@ -9,7 +9,7 @@
 ## COMMUNICATION:
 # INBOUND: 
 # - IN: 
-#   required: measure, type (dht11|dht22), pin
+#   required: measure (temperature|humidity), type (dht11|dht22), pin
 #   optional: 
 # OUTBOUND: 
 

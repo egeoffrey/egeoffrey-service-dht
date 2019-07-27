@@ -1,5 +1,6 @@
+manifest_schema: 1
 package: myhouse-service-dht
-revision: 3
+revision: 4
 version: development
 github: myhouse-project/myhouse-service-dht
 dockerhub: myhouseproject/myhouse-service-dht
@@ -8,4 +9,20 @@ container_config:
 description: Retrieve temperature/humidity from a DHT11/DHT22 sensor
 tags: service dht weather temperature raspberrypi
 modules:
-  - service/dht
+  - service/dht:
+      description:  Retrieve temperature/humidity from a DHT11/DHT22 sensor
+      service_configuration: 
+        active:
+          - name: measure
+            description: What to measure
+            format: temperature|humidity
+            required: true
+          - name: type
+            description: DHT Sensor Type
+            format: dht11|dht22
+            required: true
+          - name: pin
+            description: The pin the sensor is attached to
+            placeholder: 2
+            required: true
+            format: int
