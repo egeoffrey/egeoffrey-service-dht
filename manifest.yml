@@ -4,6 +4,7 @@ container_config:
 description: Retrieve temperature/humidity from a DHT11/DHT22 sensor
 dockerhub: myhouseproject/myhouse-service-dht
 github: myhouse-project/myhouse-service-dht
+icon: thermometer-three-quarters
 manifest_schema: 2
 modules:
 - service/dht:
@@ -24,6 +25,6 @@ modules:
         placeholder: 2
         required: true
 package: myhouse-service-dht
-revision: 5
+revision: 6
 tags: service dht weather temperature raspberrypi
 version: 1.0
