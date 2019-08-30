@@ -71,4 +71,9 @@ class Dht(Service):
 
     # What to do when receiving a new/updated configuration for this module    
     def on_configuration(self,message):
-        pass
+        # register/unregister the sensor
+        if message.args.startswith("sensors/"):
+            if message.is_null: 
+                sensor_id = self.unregister_sensor(message)
+            else: 
+                sensor_id = self.register_sensor(message)
