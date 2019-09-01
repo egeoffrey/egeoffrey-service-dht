@@ -8,7 +8,7 @@ service:
     measure: temperature
     type: dht22
     pin: 2
-  mode: active
+  mode: pull
   name: dht
   schedule:
     minutes: 10

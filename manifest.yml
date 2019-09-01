@@ -10,7 +10,7 @@ modules:
 - service/dht:
     description: Retrieve temperature/humidity from a DHT11/DHT22 sensor
     service_configuration:
-      active:
+      pull:
       - description: What to measure
         format: temperature|humidity
         name: measure
@@ -25,6 +25,6 @@ modules:
         placeholder: 2
         required: true
 package: egeoffrey-service-dht
-revision: 8
+revision: 9
 tags: service dht weather temperature raspberrypi
 version: 1.0
